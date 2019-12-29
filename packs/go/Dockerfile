@@ -1,4 +1,4 @@
 FROM scratch
 EXPOSE 8080
-ENTRYPOINT ["/REPLACE_ME_APP_NAME"]
+ENTRYPOINT ["/jenkins-x-kubernetes"]
 COPY ./bin/ /

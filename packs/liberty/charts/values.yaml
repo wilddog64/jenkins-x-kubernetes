@@ -14,7 +14,7 @@ env:
 knativeDeploy: false
 
 service:
-  name: REPLACE_ME_APP_NAME
+  name: jenkins-x-kubernetes
   type: ClusterIP
   externalPort: 9080
   internalPort: 9080

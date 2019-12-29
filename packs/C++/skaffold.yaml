@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: REPLACE_ME_DOCKER_REGISTRY_ORG/REPLACE_ME_APP_NAME
+  - image: my-vault-263321/jenkins-x-kubernetes
     context: .
     docker: {}
   tagPolicy:
@@ -21,8 +21,8 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: REPLACE_ME_APP_NAME
-        chartPath: charts/REPLACE_ME_APP_NAME
+      - name: jenkins-x-kubernetes
+        chartPath: charts/jenkins-x-kubernetes
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'
           image.tag: '{{.TAG}}'

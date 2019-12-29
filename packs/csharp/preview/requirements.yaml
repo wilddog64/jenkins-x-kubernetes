@@ -12,6 +12,6 @@ dependencies:
   # !! "alias: preview" must be last entry in dependencies array !!
   # !! Place custom dependencies above !!
 - alias: preview
-  name: REPLACE_ME_APP_NAME
-  repository: file://../REPLACE_ME_APP_NAME
+  name: jenkins-x-kubernetes
+  repository: file://../jenkins-x-kubernetes
 

@@ -8,7 +8,7 @@ pipelines:
   pullRequest:
     build:
       steps:
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
             - sh: jx step helm build
               name: helm-build
@@ -20,14 +20,14 @@ pipelines:
           name: tag-with-new-version
     build:
       steps:
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
             - sh: jx step helm build --verbose
               name: helm-build
               comment: Let's build chart
     promote:
       steps:
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
             - sh: jx step changelog --version v\$(cat ../../VERSION)
               name: changelog

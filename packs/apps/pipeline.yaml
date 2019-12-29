@@ -16,7 +16,7 @@ pipelines:
       steps:
         - sh: make build
           name: build
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
           - sh: jx step helm build
             name: helm-build
@@ -26,7 +26,7 @@ pipelines:
       steps:
         - sh: make build
           name: build
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
           - sh: make tag
             name: tag
@@ -39,7 +39,7 @@ pipelines:
       steps:
         - sh: make release
           name: release
-        - dir: charts/REPLACE_ME_APP_NAME
+        - dir: charts/jenkins-x-kubernetes
           steps:
           - comment: Let's release the helm chart
             sh: jx step helm release
